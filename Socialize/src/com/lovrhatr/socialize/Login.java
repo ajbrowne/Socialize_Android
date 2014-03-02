@@ -1,5 +1,7 @@
 package com.lovrhatr.socialize;
 
+import com.parse.Parse;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Typeface;
@@ -17,10 +19,13 @@ public class Login extends Activity {
 		getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
 	    getActionBar().hide();
 		setContentView(R.layout.activity_layout);
-		
 		title = (TextView)findViewById(R.id.login_title);
 		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/mytruetypefont.ttf");
 		title.setTypeface(typeFace);
+		
+		Parse.initialize(this, "ZNUGpdAW35nGYe5hvleBl3IndIphZPbZjVfn8Vcn", "JGTTBGebCrZXx2J2nc6TVh3is6bwUBq5hROkFCSI");
+		
+		
 	}
 
 	@Override
