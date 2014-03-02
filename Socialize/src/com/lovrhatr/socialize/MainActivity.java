@@ -55,6 +55,8 @@ public class MainActivity extends Activity {
 	public void onLocationChanged(Location location) {
 	    int lat = (int) (location.getLatitude());
 	    int lng = (int) (location.getLongitude());
+	    System.out.println(lat);
+	    System.out.println(lng);
 	  }
 
 
