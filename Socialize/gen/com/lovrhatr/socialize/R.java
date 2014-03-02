@@ -29,7 +29,7 @@ public final class R {
         public static final int search_bg_shadow=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000a;
+        public static final int action_settings=0x7f08000b;
         public static final int card_rel=0x7f080000;
         public static final int checkBox1=0x7f080004;
         public static final int checkBox2=0x7f080003;
@@ -38,6 +38,7 @@ public final class R {
         public static final int more_items=0x7f080006;
         public static final int price=0x7f080002;
         public static final int scrollView=0x7f080009;
+        public static final int theLayout=0x7f08000a;
         public static final int view1=0x7f080007;
         public static final int view2=0x7f080008;
     }
