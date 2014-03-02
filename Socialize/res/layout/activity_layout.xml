@@ -71,8 +71,7 @@
             android:ellipsize="start"
             android:ems="10"
             android:gravity="center"
-            android:hint="email"
-            android:inputType="textEmailAddress"
+            android:hint="Username"
             android:padding="4dp"
             android:typeface="sans" />
 
