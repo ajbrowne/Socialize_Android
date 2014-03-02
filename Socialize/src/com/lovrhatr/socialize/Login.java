@@ -3,13 +3,18 @@ package com.lovrhatr.socialize;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.TextView;
 
 public class Login extends Activity {
 
+	private TextView title;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.activity_layout);
+		
+		title = (TextView)findViewById(R.id.login_title);
 	}
 
 	@Override
