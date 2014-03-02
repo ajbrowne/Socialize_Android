@@ -1,5 +1,7 @@
 package com.lovrhatr.socialize;
 
+import java.util.List;
+
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
@@ -9,13 +11,19 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
+
+import com.parse.FindCallback;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
+import com.parse.ParseException;
+import com.parse.ParseGeoPoint;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
 public class MainActivity extends Activity {
 	
 	private LocationManager locationManager;
-	 private String provider;
+	private String provider;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +63,19 @@ public class MainActivity extends Activity {
 	public void onLocationChanged(Location location) {
 	    int lat = (int) (location.getLatitude());
 	    int lng = (int) (location.getLongitude());
-	    System.out.println(lat);
-	    System.out.println(lng);
+	    ParseGeoPoint point = new ParseGeoPoint(lat, lng);
+	    
+	    ParseQuery<ParseObject> query = ParseQuery.getQuery("Event");
+	    query.whereNear("location", point);
+	    query.setLimit(10);
+	    query.findInBackground(new FindCallback<ParseObject>() {
+
+			@Override
+			public void done(List<ParseObject> arg0, ParseException arg1) {
+				String name = arg0.get(0).getString("name");
+				System.out.println(name);
+			}
+			});
 	  }
 
 
