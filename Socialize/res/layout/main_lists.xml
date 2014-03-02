@@ -4,6 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true" >
+    
+    <com.lovrhatr.socialize.CardLayout
+        android:id="@+id/theLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e3e3e3"
+        android:orientation="vertical" >
+        
+        </com.lovrhatr.socialize.CardLayout>
 
         
 
